@@ -1,5 +1,5 @@
 // Função para validar CPF (algoritmo oficial brasileiro)
-function validateCPF(cpf) {
+function validateCPF(cpf: string) {
   cpf = cpf.replace(/\D/g, ''); // Remove não dígitos
   if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
 
@@ -23,7 +23,7 @@ function validateCPF(cpf) {
 }
 
 // Função para validar CNPJ (algoritmo oficial brasileiro)
-function validateCNPJ(cnpj) {
+function validateCNPJ(cnpj: string) {
   cnpj = cnpj.replace(/\D/g, ''); // Remove não dígitos
   if (cnpj.length !== 14 || /^(\d)\1{13}$/.test(cnpj)) return false;
 
@@ -56,26 +56,26 @@ function validateCNPJ(cnpj) {
 }
 
 // Função para validar CEP (formato brasileiro: 8 dígitos, com ou sem hífen)
-function validateCEP(cep) {
+function validateCEP(cep: string) {
   cep = cep.replace(/\D/g, ''); // Remove não dígitos
   return cep.length === 8;
 }
 
 // Função para validar estado (UF brasileira: 2 letras maiúsculas)
-function validateState(state) {
+function validateState(state: string) {
   const ufs = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
   return ufs.includes(state.toUpperCase());
 }
 
 // Função para validar número de telefone/mobile (exemplo: permite +55 e formatos comuns, mas ajustável)
-function validatePhone(phone) {
+function validatePhone(phone: string) {
   if (!phone) return true; // Para campos opcionais
   const regex = /^(\+55)?\s?(\(?\d{2}\)?)\s?\d{4,5}-?\d{4}$/;
   return regex.test(phone);
 }
 
 // Função para validar email (além do isEmail do Sequelize, mas pode ser redundante)
-function validateEmail(email) {
+function validateEmail(email: string) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }

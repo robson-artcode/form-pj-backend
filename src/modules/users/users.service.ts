@@ -8,9 +8,10 @@ import {
   validatePhone,
   validateEmail,
 } from '../../utils/validators';
+import { UserData, UserCreationAttributes } from './users.types';
 
 class UserService {
-  async createUser(data) {
+  async createUser(data: UserData) {
     const {
       personType,
       cnpj,
@@ -79,7 +80,7 @@ class UserService {
     }
 
     // Criação do usuário
-    const user = await User.create(data);
+    const user = await User.create(data as UserCreationAttributes);
     return user;
   }
 }
