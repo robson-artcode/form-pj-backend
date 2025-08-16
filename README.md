@@ -2,6 +2,8 @@
 
 O form-pj-backend é uma aplicação backend desenvolvida em Node.js com TypeScript, utilizando o framework Express e o ORM Sequelize para gerenciamento de usuários. Esta API permite criar e retornar usuários (pessoa física ou jurídica) com validações robustas e documentação Swagger integrada.
 
+*O projeto foi feito sem o seu build com a finalidade do seu teste local*
+
 ## Requisitos
 
 - Node.js (versão 16.x ou superior recomendada)
