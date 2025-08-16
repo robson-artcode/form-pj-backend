@@ -13,7 +13,7 @@ const swaggerDocument = {
   },
   servers: [
     {
-      url: `${process.env.BASE_URL_API || 'localhost'}:${process.env.PORT || 4568}`,
+      url: `${process.env.BASE_URL_API || 'http://localhost'}:${process.env.PORT || 4568}`,
       description: 'Local development server',
     },
   ],
