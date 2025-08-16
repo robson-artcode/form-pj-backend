@@ -65,6 +65,7 @@ class UserService {
     if (!state) throw new Error('Estado é obrigatório');
     if (!validateState(state)) throw new Error('Estado inválido (deve ser uma UF brasileira)');
 
+    console.log("Antes")
     const exists = await User.findOne({
       where: {
         [Op.or]: [
@@ -74,11 +75,11 @@ class UserService {
         ],
       },
     });
-
+ console.log("DEpois")
     if (exists) {
       throw new Error('CPF, CNPJ ou Email já cadastrado');
     }
-
+    console.log('Tentando criar usuário com dados:', data);
     // Criação do usuário
     const user = await User.create(data as UserCreationAttributes);
     return user;
