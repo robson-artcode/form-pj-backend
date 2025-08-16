@@ -50,13 +50,12 @@ Após o setup, inicie a aplicação com:
 ```bash 
 npm start
 ```
-O servidor estará disponível em http://localhost:3333.
+O servidor estará disponível em http://localhost:3333. (Se atentando apenas com a porta informada no .env)
 
 
 ## Uso
 ### Endpoints
-A documentação interativa da API está disponível em:
-text http://localhost:3333/api-docs
+A documentação interativa da API está disponível em: http://localhost:3333/api-docs (Se atentando apenas com a porta informada no .env)
 
 ### Criar um usuário: POST /users
 
