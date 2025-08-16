@@ -9,8 +9,8 @@ const port = process.env.PORT || 4568;
 
 app.use(express.json());
 
-app.get("/ping", (req, res) => {
-  return res.send("pong");
+app.get("/", (req, res) => {
+  return res.send("API Form-PJ-Backend");
 });
 
 // Configura Swagger
